@@ -275,6 +275,8 @@ while True:
                             print("Эта бумажка от врача доказывает что в день преступления вы были на сеансе")
                             print("Вас освободили!!!!!!!!")
                             win = True
+                            valible_ending += 1
+                            endings.add("Вас оправдали в суде")
                             print("Хотите начать сначала: 1) да 2) нет, вернуться на прошлый шаг")
                             do_now = int(input("Введите число: "))
                             if do_now == 1:
@@ -400,7 +402,7 @@ while True:
     elif do_now == 2:
         print("У вас еще нет открытых концовок")
     elif do_now == 3:
-        print(fail_count)
+        print(f"Количество смертей: {fail_count}")
     elif do_now == 4:
         print("Вы вышли из игры")
         break
